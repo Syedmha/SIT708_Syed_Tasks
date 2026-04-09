@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quizLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/light_background">
+
+    <!-- Top bar: theme toggle + progress text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Question 1/5"
+            android:textSize="14sp"/>
+
+        <Switch
+            android:id="@+id/themeToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+    <!-- Progress Bar (Subtask 2) -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:max="100"
+        android:progress="0"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Question Title -->
+    <TextView
+        android:id="@+id/questionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android question title:"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Question Text -->
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question goes here"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Answer Buttons (Subtask 1) -->
+    <Button
+        android:id="@+id/btnOption0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer 1"
+        android:layout_marginBottom="12dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/btn_default"/>
+
+    <Button
+        android:id="@+id/btnOption1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer 2"
+        android:layout_marginBottom="12dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/btn_default"/>
+
+    <Button
+        android:id="@+id/btnOption2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer 3"
+        android:layout_marginBottom="12dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/btn_default"/>
+
+    <Button
+        android:id="@+id/btnOption3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer 4"
+        android:layout_marginBottom="24dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/btn_default"/>
+
+    <!-- Submit / Next Button -->
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textSize="16sp"/>
+
+</LinearLayout>

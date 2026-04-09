@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light mode colors -->
+    <color name="light_background">#FFFFFF</color>
+    <color name="light_text">#000000</color>
+    <color name="light_card">#F5F5F5</color>
+
+    <!-- Dark mode colors -->
+    <color name="dark_background">#121212</color>
+    <color name="dark_text">#FFFFFF</color>
+    <color name="dark_card">#1E1E1E</color>
+
+    <!-- Answer button colors -->
+    <color name="btn_default">#6200EE</color>
+    <color name="btn_correct">#4CAF50</color>
+    <color name="btn_wrong">#F44336</color>
+    <color name="progress_bar_color">#6200EE</color>
+</resources>
