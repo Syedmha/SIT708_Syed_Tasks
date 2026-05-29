@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lost &amp; Found</string>
+    <!-- Loaded from local.properties via secrets-gradle-plugin -->
+    <string name="google_maps_key">AIzaSyChucBYTnVFDBSJ52h4dfo6Rs7TroOOWJg</string>
+</resources>

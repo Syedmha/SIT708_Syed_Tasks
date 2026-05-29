@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Type *" android:textStyle="bold" android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <RadioGroup android:id="@+id/radioGroupType"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <RadioButton android:id="@+id/radioLost" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Lost" android:checked="true" />
+            <RadioButton android:id="@+id/radioFound" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Found" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilItemName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Item Name *" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etItemName"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPhone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Phone Number *" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhone" android:inputType="phone"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDescription"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Description" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescription" android:lines="3" android:gravity="top"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Date (e.g. 2024-05-01)" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Location field — tapping opens Places Autocomplete -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLocation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Location (tap to search)" android:layout_marginBottom="4dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLocation" android:focusable="false"
+                android:clickable="true" android:cursorVisible="false"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- NEW: Get Current Location button -->
+        <Button
+            android:id="@+id/btnGetLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use My Current Location"
+            android:backgroundTint="#166534"
+            android:layout_marginBottom="12dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Category *" android:textStyle="bold" android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button android:id="@+id/btnPickImage"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Pick Image from Gallery *" android:layout_marginBottom="4dp" />
+
+        <TextView android:id="@+id/tvImageError"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Image is required" android:textColor="#EF4444"
+            android:textSize="13sp" android:visibility="gone"
+            android:layout_marginBottom="4dp" />
+
+        <ImageView android:id="@+id/imagePreview"
+            android:layout_width="match_parent" android:layout_height="200dp"
+            android:scaleType="centerCrop" android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <Button android:id="@+id/btnSave"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Save Advert" android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
